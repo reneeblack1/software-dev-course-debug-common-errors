@@ -24,22 +24,22 @@ Think about which debugging methods you found most useful and how you might appl
 // Description:
 // This program is intended to display a simple prompt in the console but fails to run.
 
-console.log("Welcome to the bootcamp
+console.log("Welcome to the bootcamp");
 
-// What’s Wrong?
+// What’s Wrong? It's missing a closing quote and parethesis. We need to update the syntas to be correct.
 
 
 // Program B
 // Description:
 // This code attempts to multiply each number in an array by 2 and display the results. However, it crashes at runtime.
 
-let numbers = [2, 4, "eight"];
+let numbers = [2, 4, 8];
 for (let i = 0; i < numbers.length; i++) {
   let doubled = numbers[i] * 2;
   console.log(doubled);
 }
 
-// What’s Wrong?
+// What’s Wrong? it tries to multiply a string ("eight") by 2, but this results in NaN, since you can't multiple a string by a number. The NaN value is a clue that we need to update 8 to an actual number.
 
 
 
@@ -51,12 +51,12 @@ function isPrime(num) {
   if (num < 2) return false;
   for (let i = 2; i < num; i++) {
     if (num % i === 0) {
-      return true;  // Supposed to indicate num is NOT prime
+      return false;  // Supposed to indicate num is NOT prime
     }
   }
-  return false; // Supposed to indicate num IS prime
+  return true; // Supposed to indicate num IS prime
 }
 
 console.log(isPrime(7)); // Expected true but gets false
 
-// What’s Wrong?
+// What’s Wrong? It should return false when a number is divisiable by a number other than 1 and itself, and true when it's prime. the true and false values in line 54 and 57 need to be swapped.  
